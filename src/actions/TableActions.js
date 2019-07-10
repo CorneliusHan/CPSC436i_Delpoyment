@@ -4,7 +4,7 @@ let next = Math.random();   // 3 default stored message
 export const addMessage = (message) => {
 
   // API call
-  axios.post('http://localhost:3001/users/addMessage', {key: next, message: message})
+  axios.post('https://peterbe.herokuapp.com/users/addMessage', {key: next, message: message})
     .then(function (response) {
       // handle success
       console.log(response.data);
@@ -23,7 +23,7 @@ export const addMessage = (message) => {
 
 export const deleteMessage = (key) => {
   // API call
-  axios.delete(`http://localhost:3001/users/deleteMessage/${key}`)
+  axios.delete(`https://peterbe.herokuapp.com/users/deleteMessage/${key}`)
   .then((response) => {
   })
   .catch((err) => {
@@ -52,7 +52,7 @@ export const togglePopup = () => {
 export const removeAll = () => {
   // API call
 
-  axios.delete(`http://localhost:3001/users/deleteAllMessage`)
+  axios.delete(`https://peterbe.herokuapp.com/users/deleteAllMessage`)
   .then((response) => {
   })
   .catch((err) => {

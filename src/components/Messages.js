@@ -27,7 +27,7 @@ const axios = require('axios');
           }
 
           callApi = async () => {
-          const response = await fetch('http://localhost:3001/users/getMessage');
+          const response = await fetch('https://peterbe.herokuapp.com/users/getMessage');
           const body = await response.json();
           if(response.status !== 200){throw Error(body.message)}
           console.log(body);
